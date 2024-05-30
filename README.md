@@ -10,7 +10,7 @@
 **Методы**:
 run(): Запуск приложения.
 handle_keyboard_event(event): Обработка события нажатия клавиши.
-handle_user_event(event): Обработка события от пользователя.
+handle_mouse_event(event): Обработка события от мыши.
 
 2. **Класс** TextDisplay:
 

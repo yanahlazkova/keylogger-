@@ -10,11 +10,12 @@ class InputHistory:
     def save_input(self, text):
         """Сохранение введенного текста в истории"""
         with open(self.history_file, 'a') as file:
-            file.write(text + '\n')
+            file.write(text)
+            print(text)
         self.history.append(text)
 
     def load_input(self):
-        """Загрузка истории ввода"""
+        """ Загрузка истории ввода """
         try:
             with open(self.history_file, 'r') as file:
                 return file.readlines()

